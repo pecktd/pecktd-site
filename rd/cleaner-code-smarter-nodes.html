@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleaner Code, Smarter Nodes — PeckTD</title>
+<meta name="description" content="Framework refactor: predefined classes for colors / sides / nodes / curves, node-as-property access, multi-attribute indexing with .last.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="container-narrow article">
+    <a href="./" class="article__back">← R&amp;D</a>
+    <h1>Cleaner Code, Smarter Nodes — Framework Update</h1>
+    <div class="article__meta"><span class="tag">Maya</span><span class="tag">Python</span><span class="tag">Framework</span></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/3q7_QwprA1I" title="Cleaner Code, Smarter Nodes" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <h2>Upgrading my rigging framework: smarter syntax &amp; node tools</h2>
+      <p>An update on the coding syntax of my rigging framework:</p>
+      <ul>
+        <li>All rigging data is now organised into predefined classes — colors, sides, node operations, and curve shapes.</li>
+        <li>The node module has been implemented to represent rigging nodes in Maya, allowing attribute access through properties.</li>
+        <li>Support for array (multi) attribute types has been added, enabling indexing and providing a <code>.last</code> method to access the latest connectable attribute.</li>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

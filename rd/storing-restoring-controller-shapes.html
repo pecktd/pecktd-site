@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storing &amp; Restoring Controller Shapes — PeckTD</title>
+<meta name="description" content="Cache curve degree, spans and form on a controller so its shape rebuilds consistently across rigs and versions.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="container-narrow article">
+    <a href="./" class="article__back">← R&amp;D</a>
+    <h1>Storing &amp; Restoring Controller Shapes</h1>
+    <div class="article__meta"><span class="tag">Maya</span><span class="tag">Rigging</span></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/Iy5P7Of86nY" title="Storing & Restoring Controller Shapes" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <p>In this video I show how I save and bring back controller shapes in my rigging setup.</p>
+      <p>At the start, you'll see a simple class I use to store stuff like the curve's degree, spans, and form — basically all the important bits to rebuild the shape later.</p>
+      <p>By caching this info and using a cached <code>(cc)</code> attribute, the curve can get rebuilt with the right number of CVs and degree even if things change.</p>
+      <p>It's super handy when you want your controllers to stay consistent across different rigs or versions.</p>
+      <p>If you're into rigging or building tools in Maya, you might find this trick pretty useful.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

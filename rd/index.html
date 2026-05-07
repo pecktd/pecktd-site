@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&amp;D — PeckTD</title>
+<meta name="description" content="Research & development write-ups: Maya rigging frameworks, MetaHuman tools, Bifrost compounds, Python tooling, and more by Peck Kanjanasahas.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0b0d'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='700' fill='%23d8b66a' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a><ul class="nav__submenu"><li><a href="barycentric-rigging.html">Barycentric Rigging</a></li><li><a href="proximity-skin-baker.html">Proximity Skin Baker</a></li><li><a href="cleaner-code-smarter-nodes.html">Cleaner Code, Smarter Nodes</a></li><li><a href="storing-restoring-controller-shapes.html">Storing &amp; Restoring Controller Shapes</a></li><li><a href="face-cage-rigger.html">Face Cage Rigger</a></li><li><a href="spherical-eye-scaling.html">Spherical Eye Scaling</a></li><li><a href="meta-human-tools.html">Meta Human Tools</a></li><li><a href="bifrost-compounds.html">Bifrost Compounds</a></li><li><a href="strik-rigging-module.html">strik Rigging Module</a></li><li><a href="blend-shape-exporter.html">Blend Shape Exporter</a></li><li><a href="weight-divider-de-boor.html">Weight Divider with de Boor's</a></li><li><a href="pkrignode-demo.html">pkrignode — first demo</a></li></ul></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <span class="hero__eyebrow">Research &amp; Development</span>
+      <h1 class="hero__title">R&amp;D</h1>
+      <p class="hero__lede">Tools, frameworks, and experiments — mostly Maya rigging, sometimes Bifrost or MetaHuman. Repos and demos where available.</p>
+    </section>
+
+    <div class="grid">
+
+      <a class="card" href="barycentric-rigging.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/HDr21sqC2ac/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Barycentric Rigging</h3>
+          <p class="card__desc">Algebraic barycentric coordinates for skin weight extraction in Maya.</p>
+          <p class="card__meta">github · demo</p>
+        </div>
+      </a>
+
+      <a class="card" href="proximity-skin-baker.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/up6f9E0uAfE/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Proximity Skin Baker</h3>
+          <p class="card__desc">Two-phase tool to bake skin weights from driven joints. Production-fast.</p>
+          <p class="card__meta">github · demo</p>
+        </div>
+      </a>
+
+      <a class="card" href="cleaner-code-smarter-nodes.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/3q7_QwprA1I/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Cleaner Code, Smarter Nodes</h3>
+          <p class="card__desc">Framework refactor: predefined classes, node properties, multi-attr indexing.</p>
+        </div>
+      </a>
+
+      <a class="card" href="storing-restoring-controller-shapes.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/Iy5P7Of86nY/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Storing &amp; Restoring Controller Shapes</h3>
+          <p class="card__desc">Cache curve degree, spans, and form so controllers stay consistent across versions.</p>
+        </div>
+      </a>
+
+      <a class="card" href="face-cage-rigger.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/bV-mmUpH764/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Face Cage Rigger</h3>
+          <p class="card__desc">Mid-quality facial rig for non-hero digi-doubles. Hours, not days.</p>
+        </div>
+      </a>
+
+      <a class="card" href="spherical-eye-scaling.html">
+        <div class="card__thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1c1c21,#2a2a30);display:flex;align-items:center;justify-content:center;color:var(--accent);font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em">CODE / GITHUB</div></div>
+        <div class="card__body">
+          <h3 class="card__title">Spherical Eye Scaling</h3>
+          <p class="card__desc">Trig + quaternion nodes in Maya for spherical eye scaling.</p>
+          <p class="card__meta">github</p>
+        </div>
+      </a>
+
+      <a class="card" href="meta-human-tools.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/bCld6dtWVDU/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Meta Human Tools</h3>
+          <p class="card__desc">DNA file modification &amp; FACS shape extraction from Epic's MetaHuman pipeline.</p>
+        </div>
+      </a>
+
+      <a class="card" href="bifrost-compounds.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/ZES6z6Y4vPQ/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Bifrost Compounds</h3>
+          <p class="card__desc">Custom-ID blend shapes &amp; quadratic-spline blend shapes built in Bifrost.</p>
+          <p class="card__meta">gitlab</p>
+        </div>
+      </a>
+
+      <a class="card" href="strik-rigging-module.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/Q8vAeMJip5M/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">strik Rigging Module</h3>
+          <p class="card__desc">String IK — a Ribbon-IK alternative with no NURBS curve / surface.</p>
+        </div>
+      </a>
+
+      <a class="card" href="blend-shape-exporter.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/PEuKmNsVTCE/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Blend Shape Exporter</h3>
+          <p class="card__desc">Store / restore blend shape data including inbetweens.</p>
+        </div>
+      </a>
+
+      <a class="card" href="weight-divider-de-boor.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/C7aaiFkF8j4/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">Weight Divider — de Boor's algorithm</h3>
+          <p class="card__desc">Cubic / square interpolation for sub-joint weight division.</p>
+        </div>
+      </a>
+
+      <a class="card" href="pkrignode-demo.html">
+        <div class="card__thumb"><img src="https://img.youtube.com/vi/Qtwdt_Ga-7I/hqdefault.jpg" alt="" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="card__title">pkrignode — first demo</h3>
+          <p class="card__desc">Node-graph UI for the auto-rig, built on Nodz.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a> · <a href="https://www.youtube.com/@pktds">YouTube</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bifrost Compounds — PeckTD</title>
+<meta name="description" content="Custom-ID blend shapes and quadratic-spline blend shapes built as Bifrost compounds in Maya.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="container-narrow article">
+    <a href="./" class="article__back">← R&amp;D</a>
+    <h1>Bifrost Compounds</h1>
+    <div class="article__meta"><span class="tag">Bifrost</span><span class="tag">Maya</span><span class="tag">Blend Shape</span></div>
+
+    <h2>Blend Shape with Custom IDs</h2>
+    <div class="video"><iframe src="https://www.youtube.com/embed/ZES6z6Y4vPQ" title="Blend Shape with Custom IDs" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <p>The setup and example can be found here: <a href="https://gitlab.com/pecktd/id_based_blend_shape_bif" target="_blank" rel="noopener">gitlab.com/pecktd/id_based_blend_shape_bif</a></p>
+      <p>It uses a multi (array) attribute as input so users can define the target vertex IDs for each base mesh vertex.</p>
+      <p>In <code>script.py</code> there is a function <code>get_target_order</code> to help users get an array of target vertex IDs that share the same position with the base mesh vertex IDs.</p>
+      <p>I've been experimenting to create a blend shape node that allows arbitrary target vertex IDs. I've done it with Maya Python API and found the speed is similar to using wrap / blend shape method.</p>
+      <p>Big thanks to <a href="https://youtu.be/YBL0E0tJKgc" target="_blank" rel="noopener">this excellent tutorial from Marco D'Ambros</a>.</p>
+    </div>
+
+    <h2>Blend Shape with 3-Points Curve</h2>
+    <div class="video"><iframe src="https://www.youtube.com/embed/1oKyW4Oy09I" title="Blend Shape with 3-Points Curve" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <p>Continuing experiments on Bifrost. This time I applied a Quadratic Spline Function to create a curvature of the vertex transformation.</p>
+      <p>The vector from the given pivot point to the middle position between base and target defines the middle point (bulge) of the spline curve.</p>
+      <p>The example scene and Bifrost graph can be found here: <a href="https://gitlab.com/pecktd/quadratic_spline_blend_shape" target="_blank" rel="noopener">gitlab.com/pecktd/quadratic_spline_blend_shape</a></p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blend Shape Exporter — PeckTD</title>
+<meta name="description" content="A Maya tool to store / restore blend shape data — including weight attrs, drivers, output geos, input targets, and inbetweens.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="container-narrow article">
+    <a href="./" class="article__back">← R&amp;D</a>
+    <h1>Blend Shape Exporter</h1>
+    <div class="article__meta"><span class="tag">Maya</span><span class="tag">Tool</span><span class="tag">Blend Shape</span></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/PEuKmNsVTCE" title="Blend Shape Exporter" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <p>A toolset to store / restore blend shape data.</p>
+      <p>The data is kept as the structure below:</p>
+<pre><code>{
+    'name': 'blendShape1',
+    'weight_attrs': ['nurbsSphereShape1', 'nurbsSphereShape2'],
+    'weights': [1.00, 0.00],
+    'drivers': ['loc1.driver', None],
+    'output_geos': ['nurbsSphereShape1', 'nurbsSphereShape2'],
+    'input_targets': [    # List of geos.
+        [    # Geos[0]
+            {    # Shape[0]
+                'input_geo_target': 'nurbsSphereShape1.worldSpace[0]',
+                'input_points_target': [(0.00, 0.00, 0.00, 1.00), ...],
+                'input_components_target': ['vtx[3:4]', 'vtx[6]', ...],
+                'inbetweens': {
+                    5500: {    # Inbetweens[0.5]
+                        'input_geo_target': None,
+                        'input_points_target': [(0.00, 0.00, 0.00, 1.00), ...],
+                        'input_components_target': ['vtx[3:4]', 'vtx[6]', ...]
+                    }
+                }
+            },
+            {    # Shape[1]
+                'input_geo_target': None,
+                'input_points_target': [(0.00, 0.00, 0.00, 1.00), ...],
+                'input_components_target': ['vtx[3:4]', 'vtx[6]', ...]
+            }
+        ],
+        [    # Geos[1]
+            { },    # Shape[0]
+            { }     # Shape[1]
+        ]
+    ]
+}</code></pre>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

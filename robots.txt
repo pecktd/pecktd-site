@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pecktd.github.io/pecktd-site/sitemap.xml

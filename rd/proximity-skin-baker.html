@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proximity Skin Baker — PeckTD</title>
+<meta name="description" content="A two-phase Maya tool to bake skin weights from driven joint setups. Production-fast: 30 seconds vs. 1h17m on dense MetaHuman meshes.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="container-narrow article">
+    <a href="./" class="article__back">← R&amp;D</a>
+    <h1>Proximity Skin Baker</h1>
+    <div class="article__meta"><span class="tag">Maya</span><span class="tag">Tool</span><a href="https://github.com/pecktd/proximity_skin_baker" target="_blank" rel="noopener">github.com/pecktd/proximity_skin_baker</a></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/up6f9E0uAfE" title="Proximity Skin Baker" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <p>As riggers, we all know Proximity Wrap is powerful — but unfortunately not exactly rigger-friendly. In many pipelines, skinning joints are driven by controllers or bound to driver joints. This breaks the baking process, since it requires direct transformation of skin joints — something that becomes problematic unless you're using a newer version of Maya with the ROM (Range of Motion) baking feature, which I still find inefficient in many cases.</p>
+
+      <p>So I built a tool to streamline the process, broken down into two main phases:</p>
+
+      <h2>Phase 1 — Setup</h2>
+      <ul>
+        <li>Duplicate both the source and target geometries.</li>
+        <li>Rebuild the skinning joint hierarchy.</li>
+        <li>Apply a Proximity Wrap to the duplicated target geometry.</li>
+      </ul>
+      <p><em>Optional tweaks:</em> adjust the wrap falloff or add Delta Mush to improve the deformation match.</p>
+
+      <h2>Phase 2 — Bake</h2>
+      <ul>
+        <li>Bake the deformations directly into the skin weights on the target geometry.</li>
+      </ul>
+
+      <h2>Performance</h2>
+      <p>In one test, the baking process took over <strong>1 hour 17 minutes</strong> on a dense MetaHuman base mesh. Not surprising given the heavy topology, large number of helper joints, and an influence limit set to 30 for maximum quality.</p>
+      <p>In contrast, on my own rigging system (142 joints, 16,533 vertices), the bake completed in just <strong>20–40 seconds</strong> — much more practical for production use.</p>
+
+      <h2>Limitations (current version)</h2>
+      <ul>
+        <li>Only supports a single joint chain for skinning.</li>
+        <li>Planning to lift this restriction in a future update.</li>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

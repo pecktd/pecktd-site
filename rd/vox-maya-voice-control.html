@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice-Controlled Maya Workflow — vox_maya + ngSkinTools — PeckTD</title>
+<meta name="description" content="vox_maya — a local, offline speech model wired straight to Maya commands. Say a word and the action runs, with ngSkinTools smoothing values already dialled in. No MCP round-trip, no hotkey wrangling.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../" class="site-logo">peck<span>td</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="nav__item"><a href="../showreels/" class="nav__link">Showreels</a></div>
+      <div class="nav__item"><a href="./" class="nav__link is-active">R&amp;D</a></div>
+      <div class="nav__item"><a href="../old-works/" class="nav__link">Old Works</a></div>
+      <div class="nav__item"><a href="../resume.html" class="nav__link">Resume</a></div>
+      <div class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="container-narrow article">
+    <a href="./" class="article__back">← R&amp;D</a>
+    <h1>Voice-Controlled Maya Workflow: vox_maya + ngSkinTools (100% Offline)</h1>
+    <div class="article__meta"><span class="tag">Maya</span><span class="tag">Python</span><span class="tag">Skin Weights</span><span class="tag">Tooling</span><a href="https://github.com/pecktd/vox_maya" target="_blank" rel="noopener">github.com/pecktd/vox_maya</a></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/0Hhh92opEj0" title="Voice-Controlled Maya Workflow: vox_maya + ngSkinTools (100% Offline)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+    <div class="article__body">
+      <p>MCP is not just expensive to run repeated operations in Maya, it's also too slow. Every command takes time to go back and forth, and that's a problem when you want to work fast during rigging and skinning.</p>
+      <p>So here's the idea: instead of using MCP for small, repeated actions, why not use a local voice recognition model connected directly to Maya commands? You say the word, and the action happens right away. No waiting, no digging through menus, no setting up hotkeys.</p>
+      <h2>What this fixes for me</h2>
+      <ul>
+        <li><strong>The magic number</strong> — I have a magic number for smoothing weights in ngSkinTools: intensity 4.5, iterations 100, given to me by my old supervisor. Instead of typing these numbers every time, I just say <em>"smooth"</em> and it runs with those exact values already set.</li>
+        <li><strong>The missing hotkeys</strong> — ngSkinTools doesn't have hotkeys for some actions I use a lot, like randomizing influence colors or switching brush mode. Instead of trying to force Maya's hotkey editor to work for these, I just say the command out loud.</li>
+      </ul>
+      <p>This is still early. It uses a local, offline speech model (no internet, no API needed) that matches your voice to a small list of commands, then sends it straight to Maya. I'll keep adding more commands over time.</p>
+      <p>Code is on <a href="https://github.com/pecktd/vox_maya" target="_blank" rel="noopener">GitHub — pecktd/vox_maya</a>.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer"><div class="container site-footer__inner"><span>© Attaporn Kanjanasahas</span><span><a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

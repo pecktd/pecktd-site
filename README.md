@@ -2,7 +2,7 @@
 
 Static portfolio site for Attaporn "Peck" Kanjanasahas — Rigger / Character TD.
 
-Vanilla HTML, CSS, and JS. No build step. Deploys directly to GitHub Pages.
+Vanilla HTML, CSS, and JS. No build step. Deploys directly to GitHub Pages, served at <https://pkrig.com> (custom domain set by the `CNAME` file; DNS is on Cloudflare).
 
 ## Local preview
 

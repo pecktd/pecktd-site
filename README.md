@@ -48,6 +48,7 @@ Each page is a self-contained HTML file. To change:
 ├── showreels/              # 6 reel pages + index
 ├── rd/                     # 12 R&D articles + index
 ├── old-works/              # 4 archive pages + index
+├── games/                  # Games index + star-merge/ (copy of pecktd/star-merge: index.html, sprites/, thumb.png)
 ├── resume.html             # Print-friendly
 ├── contact.html            # Email reveal on click
 ├── 404.html

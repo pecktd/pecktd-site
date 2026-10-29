@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ninefold Crown</title>
+  <script type="module" crossorigin src="./assets/main-rhhj6Fn7.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Butf0a6S.css">
+</head>
+<body>
+<div id="labels"></div>
+
+<!-- ---------- login / occupation select ---------- -->
+<div id="login" class="overlay">
+  <div class="panel login">
+    <h1>The Ninefold Crown</h1>
+    <p class="motto">“Nine paths, one oath. Who gathers the nine shall wear the crown.”</p>
+    <label>Name <input id="name" maxlength="16" placeholder="2–16 letters" autocomplete="off"></label>
+    <div id="sexes" class="sexes"><button data-sex="m">Male</button><button data-sex="f">Female</button></div>
+    <div id="occs" class="occs"></div>
+    <button id="enter" class="primary">Enter Oathgate</button>
+    <div id="peerPlay" class="peerPlay">
+      <button id="soloBtn">Play solo</button>
+      <button id="hostBtn">Host for friends</button>
+      <span class="joinBox"><input id="code" maxlength="4" placeholder="CODE" autocomplete="off"><button id="joinBtn">Join</button></span>
+    </div>
+    <p id="peerHint" class="hint">Host to get a 4-letter room code. Up to 4 players, straight from browser to browser.</p>
+    <p id="loginErr" class="err"></p>
+  </div>
+</div>
+
+<div id="disconnected" class="overlay hidden">
+  <div class="panel">
+    <h2 id="dcTitle">Connection lost</h2>
+    <p id="dcReason"></p>
+    <button class="primary" onclick="location.reload()">Reconnect</button>
+  </div>
+</div>
+
+<!-- ---------- in-game HUD ---------- -->
+<div id="hud" class="hidden">
+  <div id="topbar"><span id="zone">Oathgate · Crown Plinth</span><span id="roomCode"></span><span id="online"></span><span id="ping"></span>
+    <button id="musicBtn" class="tog" title="Music (M)">♪ Music</button><button id="sfxBtn" class="tog" title="Sound effects">🔊 Sound</button></div>
+  <div id="toast" class="hidden"></div>
+  <div id="target" class="hidden"><div id="targetName"></div><div class="bar hp"><i id="targetFill"></i><span id="targetText"></span></div></div>
+  <canvas id="minimap" width="168" height="168"></canvas>
+
+  <div id="chat">
+    <div id="chatLog"></div>
+    <input id="chatInput" maxlength="140" placeholder="Press Enter to chat">
+  </div>
+
+  <div id="bottom">
+    <div id="card">
+      <div id="cardName"></div>
+      <div id="cardSub"></div>
+      <div class="bar hp"><i id="hpFill"></i><span id="hpText"></span></div>
+      <div class="bar res"><i id="resFill"></i><span id="resText"></span></div>
+      <div class="bar exp"><i id="expFill"></i><span id="expText"></span></div>
+    </div>
+    <div id="skills"></div>
+    <div id="menuBtns">
+      <button id="charBtn" title="Character (C)">Character <b class="badge"></b></button>
+      <button id="skillBtn" title="Skill tree (K)">Skills <b class="badge"></b></button>
+    </div>
+  </div>
+  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar (drag skills from K) · click a monster = fight · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat</div>
+
+  <div id="charPanel" class="gpanel hidden">
+    <div class="gpanelHead">Character <button class="panelClose" data-panel="char" title="Close (C)">×</button></div>
+    <div id="charBody"></div>
+  </div>
+  <div id="skillPanel" class="gpanel wide hidden">
+    <div class="gpanelHead">Skill Tree <button class="panelClose" data-panel="skills" title="Close (K)">×</button></div>
+    <div id="skillBody"></div>
+  </div>
+</div>
+
+</body>
+</html>

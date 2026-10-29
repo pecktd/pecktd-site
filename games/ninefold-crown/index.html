@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Ninefold Crown</title>
-  <script type="module" crossorigin src="./assets/main-DLWV2dTR.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-86RISb4r.css">
+<title>The Ninefold Crown</title>
+  <script type="module" crossorigin src="./assets/main-nZqAFeQ-.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DpcJF6C3.css">
 </head>
 <body>
 <div id="labels"></div>
@@ -26,6 +26,23 @@
     </div>
     <p id="peerHint" class="hint">Host to get a 4-letter room code. Up to 4 players, straight from browser to browser.</p>
     <p id="loginErr" class="err"></p>
+    <!-- web build: heroes saved to the cloud (cloud.js) -->
+    <div id="saves" class="saves webOnly">
+      <div class="savesHead">Saved heroes <span id="acct"></span></div>
+      <div id="saveList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- web build: choose how to keep saves, the first time Save is pressed -->
+<div id="signIn" class="overlay hidden">
+  <div class="panel">
+    <h2>Save your hero</h2>
+    <p>Sign in with Google to keep your heroes on any device, or save as a guest in this browser only.</p>
+    <button id="signGoogle" class="primary">Sign in with Google</button>
+    <button id="signGuest">Save as a guest</button>
+    <button id="signCancel">Cancel</button>
+    <p id="signErr" class="err"></p>
   </div>
 </div>
 
@@ -41,7 +58,7 @@
 <!-- ---------- in-game HUD ---------- -->
 <div id="hud" class="hidden">
   <div id="topbar"><span id="zone">Oathgate · Crown Plinth</span><span id="roomCode"></span><span id="online"></span><span id="ping"></span>
-    <button id="musicBtn" class="tog" title="Music (M)">♪ Music</button><button id="sfxBtn" class="tog" title="Sound effects">🔊 Sound</button></div>
+    <button id="musicBtn" class="tog" title="Music (M)">♪ Music</button><button id="sfxBtn" class="tog" title="Sound effects">🔊 Sound</button><button id="saveBtn" class="tog webOnly" title="Save your hero to the cloud">💾 Save</button></div>
   <div id="toast" class="hidden"></div>
   <div id="target" class="hidden"><div id="targetName"></div><div class="bar hp"><i id="targetFill"></i><span id="targetText"></span></div></div>
   <canvas id="minimap" width="168" height="168"></canvas>
@@ -65,7 +82,7 @@
       <button id="skillBtn" title="Skill tree (K)">Skills <b class="badge"></b></button>
     </div>
   </div>
-  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar (drag skills from K) · click a monster = fight · click the Oathkeeper or E = talk · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat · the portal in Oathgate's top corner leads to the Ashen Reach · /level 15 in chat = level up (testing)</div>
+  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar: hold to aim, release to use (drag skills from K) · click a monster = fight · click the Oathkeeper or E = talk · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat · the portal in Oathgate's top corner leads to the Ashen Reach · /level 15 in chat = level up (testing)</div>
 
   <div id="charPanel" class="gpanel char hidden">
     <div class="gpanelHead">Character <button class="panelClose" data-panel="char" title="Close (C)">×</button></div>
@@ -80,6 +97,6 @@
     <div id="jobBody"></div>
   </div>
 </div>
-
+
 </body>
 </html>

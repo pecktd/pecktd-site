@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Ninefold Crown</title>
-  <script type="module" crossorigin src="./assets/main-t8yQH-Bu.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-DA0Tj_jF.css">
+<title>The Ninefold Crown</title>
+  <script type="module" crossorigin src="./assets/main-443dHyUO.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-BX4aappJ.css">
 </head>
 <body>
 <div id="labels"></div>
@@ -75,6 +75,7 @@
       <div class="bar hp"><i id="hpFill"></i><span id="hpText"></span></div>
       <div class="bar res"><i id="resFill"></i><span id="resText"></span></div>
       <div class="bar exp"><i id="expFill"></i><span id="expText"></span></div>
+      <div id="cardGold"></div>
     </div>
     <div id="skills"></div>
     <div id="menuBtns">
@@ -82,7 +83,7 @@
       <button id="skillBtn" title="Skill tree (K)">Skills <b class="badge"></b></button>
     </div>
   </div>
-  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar: hold to aim, release to use (drag skills from K) · click a monster = fight · click the Oathkeeper (class) or the Wise Man (skills), or E = talk · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat · the portal in Oathgate's top corner leads to the Ashen Reach · /level 15 in chat = level up (testing)</div>
+  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar: hold to aim, release to use (drag skills from K) · click a monster = fight · click the Oathkeeper (class), the Wise Man (skills) or Hilde (shop), or E = talk · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat · the portal in Oathgate's top corner leads to the Ashen Reach · /level 15 in chat = level up (testing)</div>
 
   <div id="charPanel" class="gpanel char hidden">
     <div class="gpanelHead">Character <button class="panelClose" data-panel="char" title="Close (C)">×</button></div>
@@ -92,11 +93,15 @@
     <div class="gpanelHead">Skill Tree <button class="panelClose" data-panel="skills" title="Close (K)">×</button></div>
     <div id="skillBody"></div>
   </div>
+  <div id="shopPanel" class="gpanel wide hidden">
+    <div class="gpanelHead">Hilde · Weapons &amp; armor <button class="panelClose" data-panel="shop" title="Close (Esc)">×</button></div>
+    <div id="shopBody"></div>
+  </div>
   <div id="jobPanel" class="gpanel wide hidden">
     <div class="gpanelHead">Oathkeeper · Class change <button class="panelClose" data-panel="job" title="Close (Esc)">×</button></div>
     <div id="jobBody"></div>
   </div>
 </div>
-
+
 </body>
 </html>

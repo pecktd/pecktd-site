@@ -7,8 +7,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#14110f">
 <title>The Ninefold Crown</title>
-  <script type="module" crossorigin src="./assets/main-C_aTjHvE.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-C_8JRJt1.css">
+  <script type="module" crossorigin src="./assets/main-Cu1adRUo.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CHcTd1Tb.css">
 </head>
 <body>
 <div id="labels"></div>
@@ -69,6 +69,18 @@
   <div id="party" class="hidden"><div class="phead">Party <button id="partyLeave" title="Leave the party">Leave</button></div><div id="partyList"></div></div>
   <div id="partyAsk" class="hidden"><span id="partyAskText"></span><button id="partyYes">Join</button><button id="partyNo">No</button></div>
   <div id="playerMenu" class="hidden"></div>
+  <div id="dangerFlash"></div>
+  <div id="arenaPick" class="hidden">
+    <b>The Four Corners</b>
+    <small>Anyone not in your party can attack you here. Choose your corner.</small>
+    <div class="apGrid">
+      <button data-corner="n" class="apN">North</button>
+      <button data-corner="w" class="apW">West</button>
+      <button data-corner="e" class="apE">East</button>
+      <button data-corner="s" class="apS">South</button>
+    </div>
+    <button id="arenaCancel">Stay here</button>
+  </div>
 
   <div id="chat">
     <div id="chatLog"></div>
@@ -91,7 +103,7 @@
       <button id="chatToggle" title="Chat">Chat</button>
     </div>
   </div>
-  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar: hold to aim, release to use (drag skills from K) · click a monster = fight · click the Oathkeeper (class), the Wise Man (skills) or Hilde (shop), or E = talk · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat · the portal in Oathgate's top corner leads to the Ashen Reach · /level 15 in chat = level up (testing)</div>
+  <div id="help">Click / hold = move · WASD = walk · 1–0 skill bar: hold to aim, release to use (drag skills from K) · click a monster = fight · click the Oathkeeper (class), the Wise Man (skills) or Hilde (shop), or E = talk · Esc = stop · C character · K skills · M music · Wheel = zoom · Enter = chat · the portal in Oathgate's top corner leads to the Ashen Reach, the one in its bottom corner to the Four Corners (fight other players) · /level 15 in chat = level up (testing)</div>
 
   <div id="charPanel" class="gpanel char hidden">
     <div class="gpanelHead">Character <button class="panelClose" data-panel="char" title="Close (C)">×</button></div>
